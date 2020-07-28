@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 import express from 'express';
 import cors from 'cors';
 
@@ -14,8 +16,8 @@ app.post('/github-authenticate', async (req, res) => {
   try {
     const authResponse = await api.post('login/oauth/access_token', {
       code,
-      client_id: '84ddb13f8f7f968b202c',
-      client_secret: 'ef4ee16c1ac248f97b0ab0a4b64e1a2658b77ccf',
+      client_id: process.env.CLIENT_ID,
+      client_secret: process.env.CLIENT_SECRET,
     }, {
       headers: {
         accept: 'application/json'
