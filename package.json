@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Raphael Cássio de Souza <rapha.cassio@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
